@@ -57,7 +57,7 @@ function MainContent() {
           I code in Java on daily basis.<br/>
           I also code in Javascript occasionally.<br/>
           I used to code in C#, .NET, PHP, C and Assembly Language in my previous projects.<br/>
-          Currently, I am learning Python.
+          I am currently learning Python.
         </Typography>
       </div>
     </main>

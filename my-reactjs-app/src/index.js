@@ -1,23 +1,12 @@
-const fetch = require('node-fetch');
-const cheerio = require('cheerio');
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+import * as serviceWorker from './serviceWorker';
 
-const URL = 'https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_in_Malaysia';
+ReactDOM.render(<App />, document.getElementById('root'));
 
-async function getFetchData() {
-    const fetchData = await fetch(URL, {
-        method: 'POST',
-        mode: 'no-cors',
-        cache: 'no-cache',
-        credentials: 'same-origin',
-        headers: {
-            'Content-Type': 'application-json'
-        },
-        redirect: 'follow',
-        referrerPolicy: 'no-referrer'
-    });
-    return cheerio.load(fetchData);
-}
-
-getFetchData()
-    .then(result => console.log('result: ', result))
-    .catch(error => console.log('error: ', error));
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://bit.ly/CRA-PWA
+serviceWorker.unregister();
